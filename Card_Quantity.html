@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Quantity</title>
+  <style>
+    *{
+      padding: 10px;
+      text-align: center;
+      
+    }
+    .buttons{
+      background-color: yellow;
+      border: none;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+<div >
+  <button 
+  onclick="
+   console.log(`CartQuantity:${CartQuantity}`);
+   ">Show Quantity</button>
 
+  <button onclick="
+  CartQuantity = CartQuantity+1;
+  //short variable above the line
+  //CartQuantity++;
+  console.log(`CartQuantity:${CartQuantity}`)
+  ">Add To Cart
+  </button>
+
+  <button onclick="
+  CartQuantity = CartQuantity+2;
+  //short variable above the line
+  //CartQuantity+=2;
+  console.log(`CartQuantity:${CartQuantity}`)
+  ">+2</button>
+
+  <button onclick="
+  CartQuantity=CartQuantity+3;
+  //short variable above the line
+  //CartQuantity+=3;
+  console.log(`CartQuantity:${CartQuantity}`)
+  ">+3</button>
+
+  <button onclick="
+   CartQuantity=0;
+  console.log('cart was reset')
+  console.log(`CartQuantity:${CartQuantity}`)
+  ">Reset Cart</button>
+</div>
+
+  <script>
+    let CartQuantity= 0;
+   
+
+     
+
+  </script>
+</body>
+</html>
