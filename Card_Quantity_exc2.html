@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button 
+  onclick="
+  CartQuantity+=4;
+  console.log(`CartQuantity:${CartQuantity}`)
+  ">+4</button>
+
+  <button onclick="
+  CartQuantity+=5;
+  console.log(`CartQuantity:${CartQuantity}`)
+  ">+5</button>
+
+  <button 
+  onclick="
+  CartQuantity-=1;
+  console.log(`CartQuantity: ${CartQuantity}`)
+  ">Remove From Cart</button>
+
+  <button 
+  onclick="
+  CartQuantity-=2;
+  console.log(`CartQuantity:${CartQuantity}`)
+  ">-2</button>
+
+<button 
+onclick="
+CartQuantity-=3;
+console.log(`CartQuantity:${CartQuantity}`)
+">-3</button>
+
+  <script>
+    let variableName = 'SanthoshKumar'
+    alert(`My name is:${variableName}`);
+
+    let Coffe = 5;
+    let bagles = 3;
+    let Soup = 9;
+
+    let baglescount = 3;
+
+    let cost = (Coffe + (bagles * baglescount) + Soup);
+    let Tax = (cost * 0.1);
+    let Totalcost = (cost + Tax);
+
+    console.log(`Cost of food:$${cost}`)
+    console.log(`The reastaurant charges (10%):$${Tax}`)
+    console.log(`Total cost:$${Totalcost}`)
+
+
+    let CartQuantity=0;
+
+
+  </script>
+</body>
+
+</html>
