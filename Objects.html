@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <html>
+    <script>
+      // An objects groups multiple values together
+      // Lets us use multiple values together
+      // 
+      //  why we used objects
+      // 1. make our code organized
+      // 2. 
+
+      // object refrencess
+
+      const object1 = {
+        name : 'santhoshkumar'
+        
+      }
+      const object2 = object1
+      
+      object1.name ='santhoshbligation'
+       
+      console.log(object2)
+      // we can't compare object directly
+
+      // like;
+      // console.log( object3 === object1);
+
+      const object3 ={
+        message : 'santhoshkumar'
+      }
+      object3.message = 'very well come to Javascript'
+      const object4 = object3
+      console.log(object4)
+      
+      // shortcuts for objects
+
+      const object6 = {
+        college : 'rvs college of engineering and technolgy',
+        degere : 'BE(batchelor of engineering)'
+      }
+      //const college = object6.college;
+      
+      //const degree = object6.degere;
+
+      //console.log( college , degree)
+      //console.log(degree)
+      
+      const {college,degere} = object6
+      console.log(college); 
+      console.log(degere)
+
+      // short hand property
+
+      const object7 ={
+       // college : college
+       college,
+      //  method : function function1(){
+      //     comsole.log('method')
+      //   }
+
+       method () {
+        console.log('Farewell');
+       }
+      }
+      console.log(college);
+      object7.method();
+      
+
+      // finaly in this lesson
+      // 1. object = group related values together
+      // 2. added a score to a rock paper scissor
+      // 3. built in (JSON, local storage)
+      // 4. more details about (null, autoboxing, refrences)
+      // 5. shortcuts (destructring, shorthand, property shorthand method)
+
+
+    </script>
+  </html>
+</body>
