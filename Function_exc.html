@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>functions</title>
+</head>
+<body>
+  <script>
+    //  function convertToFahrenheit(celsius){
+    //    return (celsius * 9/5) + 32
+    //  }
+    //  console.log(convertToFahrenheit(25))
+
+    //  function convertToCelcius (Fahrenhiet){
+    //    return(Fahrenhiet - 32) * 5/9
+    //  }
+    //  console.log(convertToCelcius(86));
+
+    // function convertTemprature (degrees, unit){
+    //   if (unit === 'c'){
+    //     const result = convertToFahrenhiet(degrees);
+    //     return `${result}F`;
+
+    //   }
+    //   function convertToCelcius ( degrees, unit){
+    //     if (unit === 'F'){
+    //       const result = convertToCelcius (degrees);
+    //       return `${result}C`;
+    //     }
+    //   }
+    //   console.log(convertTemprature(25 ,'c'));
+    //   console.log(convertToCelcius(86,'F'));
+    
+
+    function convertLength(length, from, to) {
+        if (from === 'km' && to === 'miles') {
+          return `${length / 1.6} miles`;
+        } else if (from === 'miles' && to === 'km') {
+          return `${length * 1.6} km`;
+
+        // You can also do if (from === 'km' && to === 'km) { ... }
+        // if (from === to) is a trick you can use to save some code.
+        } else if (from === to) {
+          return `${length} ${to}`;
+        }
+      }
+
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));
+
+  </script>
+</body>
+</html>
