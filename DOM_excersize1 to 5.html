@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excersize of DOM</title>
+</head>
+<body>
+
+
+  <p>Excersize 1</p>
+   <button>9a</button>
+  <button class="js-button">9b</button> 
+
+
+
+
+  <p>Excersize 2</p>
+
+  <button onclick="
+    document.querySelector('.js-choise').innerHTML='You Choose Head'
+  ">Heads</button>
+   
+  <button onclick="
+    document.querySelector('.js-choise').innerHTML='You Choose Tail'
+  ">Tails</button>
+
+  <p class="js-choise"></p>
+
+
+
+  <p>Excerize 3</p>
+
+  <input class="js-input-name" placeholder="Enter Your Name" onkeydown="
+  if ( event.key === 'enter'){
+    DisplayMessage();
+  }
+  ">
+
+  <button onclick="
+  DisplayMessage();
+  ">submit</button>
+
+  <p class="js-message"></p>
+
+
+
+
+
+
+  <p>Excersize 4</p>
+
+  <p>Amazon Calculator</p>
+
+  <input placeholder="Cost of Order" class="js-cost-input" onkeydown=handleCostKeydown(event);
+  >
+  
+  <button onclick="
+  CalculateTotal();
+  ">Calculate</button>
+
+  <p class="js-Total-Cost"> $</p>
+
+  <p>Excersize 5</p>
+
+  <input placeholder="type something" class="js-input" 
+  onkeyup="
+  const InputElement =document.querySelector('.js-input');
+  document.querySelector('.js-message1').innerHTML=InputElement.value;
+  ">
+  <p class="js-message1"></p>
+
+  <script>
+    // Excersize1
+     console.log(document.querySelector('button'));
+     document.querySelector('.js-button').innerHTML ='9b done!'
+
+     // Excersize 3
+
+     function DisplayMessage (){
+      const InputElement = document.querySelector('.js-input-name');
+
+   document.querySelector('.js-message').innerHTML=`Your name is:${InputElement.value}`;
+
+     }
+
+
+      // Excersize 4
+       function  handleCostKeydown(event) {
+        if(event.key = 'Enter'){
+          CalculateTotal();
+        }
+       }
+
+       function CalculateTotal(){
+        const InputElement = document.querySelector('.js-cost-input');
+
+        // converts numbers to cents by *100
+        let cost = Number(InputElement.value)*100;
+
+        if ( cost < 4000) {
+          cost = cost +1000
+        }
+
+        // convert back to dollors at the end.
+        document.querySelector('.js-Total-Cost').innerHTML =`$${cost/100}`;
+       }
+
+
+  </script>
+  
+</body>
+</html>
